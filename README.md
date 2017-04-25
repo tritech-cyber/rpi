@@ -6,7 +6,8 @@ Configure the pi
 - Expand the file system.
 - Se pi password 
 - Change your keyboard layout to US
-- Change hostname to z314 where z is NATO letter of your work station.
+- Change hostname to Z314 where Z is NATO letter of your work station.
+      (Example: Computer 1 is Alpha so the hostname will be A314)
 - Enable ssh
 
 # useradd -m -d /home/username  username
