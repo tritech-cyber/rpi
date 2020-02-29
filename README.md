@@ -33,7 +33,7 @@ DO NOT DO THIS ON CLIENTS
 Back up /etc/dhcpcd.conf
 then replace the code with the following:
 
-# Only got static eth0 clients.
+# Only for static eth0 clients.
 # /etc/dhcpcd.conf
 interface eth0
 
