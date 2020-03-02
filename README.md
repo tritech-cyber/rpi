@@ -1,48 +1,53 @@
 # rpi
 
-As root (sudo -i)
-Configure the pi
-#raspi-config
-- Expand the file system.
-- Se pi password 
-- Change your keyboard layout to US
-- Change hostname to Z314 where Z is NATO letter of your work station.
-      (Example: Computer 1 is Alpha so the hostname will be A314)
-- Enable ssh
+https://www.raspberrypi.org/documentation/usage/gpio/
 
-# useradd -m -d /home/username  username
-# usermod -a -G pi,adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi username
-Change your password
-#passwd username
+RPI4 $pinout
+,--------------------------------.
+| oooooooooooooooooooo J8   +======
+| 1ooooooooooooooooooo  PoE |   Net
+|  Wi                    oo +======
+|  Fi  Pi Model 4B  V1.1 oo      |
+|        ,----.               +====
+| |D|    |SoC |               |USB3
+| |S|    |    |               +====
+| |I|    `----'                  |
+|                   |C|       +====
+|                   |S|       |USB2
+| pwr   |HD|   |HD| |I||A|    +====
+`-| |---|MI|---|MI|----|V|-------'
 
-# apt-get upgrade
-# apt-get update
-// optional
-# dpkg --configure -a
-#apt-get autoremove
+Revision           : c03111
+SoC                : BCM2711
+RAM                : 4096Mb
+Storage            : MicroSD
+USB ports          : 4 (excluding power)
+Ethernet ports     : 1
+Wi-fi              : True
+Bluetooth          : True
+Camera ports (CSI) : 1
+Display ports (DSI): 1
 
-#apt-get install firefox-esr
-#apt-get install bless (hex editor)
+$pinout
+J8:
+   3V3  (1) (2)  5V    
+ GPIO2  (3) (4)  5V    
+ GPIO3  (5) (6)  GND   
+ GPIO4  (7) (8)  GPIO14
+   GND  (9) (10) GPIO15
+GPIO17 (11) (12) GPIO18
+GPIO27 (13) (14) GND   
+GPIO22 (15) (16) GPIO23
+   3V3 (17) (18) GPIO24
+GPIO10 (19) (20) GND   
+ GPIO9 (21) (22) GPIO25
+GPIO11 (23) (24) GPIO8 
+   GND (25) (26) GPIO7 
+ GPIO0 (27) (28) GPIO1 
+ GPIO5 (29) (30) GND   
+ GPIO6 (31) (32) GPIO12
+GPIO13 (33) (34) GND   
+GPIO19 (35) (36) GPIO16
+GPIO26 (37) (38) GPIO20
+   GND (39) (40) GPIO21
 
-// nodejs
-curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-sudo apt-get install -y nodejs
-
-
-DO NOT DO THIS ON CLIENTS
-Back up /etc/dhcpcd.conf
-then replace the code with the following:
-
-# Only for static eth0 clients.
-# /etc/dhcpcd.conf
-interface eth0
-
-static ip_address=192.168.0.10/24
-static routers=192.168.0.1
-static domain_name_servers=192.168.0.1
-
-interface wlan0
-
-static ip_address=192.168.0.200/24
-static routers=192.168.0.1
-static domain_name_servers=192.168.0.1
