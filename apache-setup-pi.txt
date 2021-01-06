@@ -1,0 +1,14 @@
+Apache2 Setup
+$ sudo apt install apache2
+$ sudo chown -R pi:pi /var/www/
+$ ln -s /var/www/ /home/pi/www
+$ ln -s /var/www/ /home/pi/Desktop/www
+$ sudo systemctl start apache2
+
+RENAME THE index.html file in /var/www/html/ directory
+
+$ cd /var/www/html
+$ mv index.html index.default.html
+
+NOW CHECK TO SEE IF THE WEB SERVER IS RUNNING
+OPEN CHROMIUM AND TYPE localhost AS THE URL

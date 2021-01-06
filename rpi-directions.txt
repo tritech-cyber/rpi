@@ -1,0 +1,3 @@
+cd ~/Desktop
+mkdir tritech-cyber
+git clone https://github.com/tritech-cyber/rpi.git
