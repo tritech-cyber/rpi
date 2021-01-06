@@ -8,6 +8,9 @@ mkdir /home/users
 useradd -m -d /home/users/zoey zoey -s /bin/bash
 
 Do not give the user zoey a linux password
+Here is how to add a SMB (samba password)
+$sudo smbpasswd -a pi
+
 
 place this at the end of the smb.conf file
 in /etc/samba/ Directory
