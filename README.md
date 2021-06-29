@@ -2,6 +2,7 @@
 <pre>
 https://www.canakit.com/raspberry-pi-4-basic-kit.html
 What you need:
+- case is nice
 - hdmi monitor
 - micro to hdmi cable
 - USB-C Power
