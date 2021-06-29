@@ -1,5 +1,15 @@
 # rpi
 <pre>
+https://www.canakit.com/raspberry-pi-4-basic-kit.html
+What you need:
+- hdmi monitor
+- micro to hdmi cable
+- USB-C Power
+- micro-sd card
+- RPI 4 with 8GB/4GB
+- keyboard and mouse
+
+
 https://www.raspberrypi.org/documentation/usage/gpio/
 
 RPI4 $pinout
